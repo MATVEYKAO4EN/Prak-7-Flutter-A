@@ -8,15 +8,7 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
   final _loginController = TextEditingController();
-  final _passwordController = TextEditingController();
-
-  void _login() {
-    if (_loginController.text.isNotEmpty && _passwordController.text.isNotEmpty) {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => CategoriesScreen()),
-      );
-    } else {
+  final _passwor
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Введите логин и пароль')),
       );
